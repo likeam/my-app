@@ -6,16 +6,20 @@ import TweetList from "./components/TweetList";
 function App() {
 
   //Here is the place for the normal js
+
   const name = "Abdul Rehman";
   const message = "this is actualy tweet";
 
+  //Create Function
+
+
 
   return (
-    <div className="App">
-      <h1>Hello to React</h1>
+    <div >
+    
       <CreateTweet />
-      <TweetList name = {name} message = {message} />
-  
+      <TweetList name = {name} message = {message} /> 
+    
     </div>
   );
 }
