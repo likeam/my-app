@@ -1,21 +1,25 @@
 import React from 'react'
-import { useState } from 'react';
 
-export default function CreateTweet() {
+export default function CreateTweet({textInput, setTextInput, tweets, setTweets}) {
 
-    //State
-    const [textInput, setTextInput] = useState('');
+
 
     //Function
     const userInputHandler = (e) => {
-        console.log(e.target.value);
+        setTextInput(e.target.value);
+    }
+
+    const submitTweetHandler = (e) => {
+        e.preventDefault();
+        setTweets([...tweets, textInput]);
+        setTextInput("");
     }
 
     return (
-        <form >
-            <textarea onChange={userInputHandler} cols="50" rows="5"></textarea>
+        <form onSubmit={submitTweetHandler}>
+            <textarea onChange={userInputHandler} value={textInput} cols="50" rows="5"></textarea>
             <button>Submit</button>
-            <h1>{textInput}</h1>
+        
         </form>
     )
 }
