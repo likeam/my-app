@@ -19,7 +19,7 @@ function App() {
     <div >
     
       <CreateTweet textInput = {textInput} setTextInput = {setTextInput} tweets ={tweets} setTweets = {setTweets}  />
-      <TweetList name = {name} tweets = {tweets}  /> 
+      <TweetList name = {name} tweets = {tweets} setTweets = {setTweets} /> 
     
     </div>
   );
