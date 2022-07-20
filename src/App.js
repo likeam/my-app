@@ -1,10 +1,12 @@
 //Components Imports
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CreateTweet from "./components/CreateTweet";
 import TweetList from "./components/TweetList";
 
 
 function App() {
+
+
 
 
 
@@ -15,6 +17,10 @@ function App() {
 
 
   //Create Function
+
+  useEffect(() =>{
+    console.log('We run a fuction');
+  }, [textInput]);
 
 
 
