@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import styled from 'styled-components'
 export default function Tweet({name, tweet, setTweets, tweets }) {
 
     const deleteTweet = ()=>{
@@ -9,11 +9,19 @@ export default function Tweet({name, tweet, setTweets, tweets }) {
 
     return (
     
-        <div className='tweet'>
-            <h2>{name}</h2>
-            <h3>{tweet.message}</h3>
+        <TweetStyle >
+            <h2 > {name}</h2>
+            <h3 >{tweet.message}</h3>
             <button onClick={deleteTweet}>Delete</button>
             <button>Like</button>
-        </div>
+        </TweetStyle>
     );
 }
+
+const TweetStyle = styled.div`
+bacground-color: "red";
+bordet-radius: 3px;
+border: 2px solid palevioletred;
+font-size: 2rem;
+
+`;
